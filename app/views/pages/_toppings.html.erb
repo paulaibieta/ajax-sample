@@ -1,0 +1,8 @@
+<p>Please select your toppings</p>
+  <%= simple_form_for pizza, url: delivery_path(id: pizza.id), remote: true do |f| %>
+    <%= f.input :toppings, as: :check_boxes, collection: toppings %>
+    <%= f.input :cheese, collection: cheese %>
+    <%= f.button :submit %>
+  <% end %>
+
+</div>
